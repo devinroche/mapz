@@ -7,7 +7,7 @@ procedurally generated 2D world made using javascript and cellular automaton.
 ```open index.html```
 
 ## Pix of mapz
-![alt text](images/Group.jpeg)
+![alt text](images/Group.png)
 
 ## Acknowledgments
 
