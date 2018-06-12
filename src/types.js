@@ -1,0 +1,12 @@
+const WIDTH = 20;
+const HEIGHT = 40;
+const CHANCE_GRASS = 45;
+const NUMBER_STEPS = 2;
+const BIRTH_LIMIT = 4;
+const SNOW_BIRTH = 6;
+const DEATH_LIMIT = 3;
+
+module.exports = {WIDTH, HEIGHT, CHANCE_GRASS, NUMBER_STEPS, BIRTH_LIMIT, SNOW_BIRTH, DEATH_LIMIT}
+
+
+

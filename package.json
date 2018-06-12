@@ -1,0 +1,27 @@
+{
+    "name": "proceduralmap",
+    "description": "procedurally generated 2D world made using javascript and cellular automaton.",
+    "version": "1.0.0",
+    "main": "webpack.config.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/devinroche/mapz.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/devinroche/mapz/issues"
+    },
+    "homepage": "https://github.com/devinroche/mapz#readme",
+    "dependencies": {
+      "webpack": "^4.12.0"
+    },
+    "scripts": {
+        "start": "npm run webpack",
+        "webpack": "webpack -d --watch"
+    },
+    "devDependencies": {
+        "webpack-cli": "^3.0.3"
+    }
+}
