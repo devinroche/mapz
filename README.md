@@ -4,7 +4,7 @@ procedurally generated 2D world made using javascript and cellular automaton.
 
 ## Getting Started
 
-```open index.html```
+1. start up webpack (this also opens the built html file in your browser): ```npm start```
 
 ## Pix of mapz
-![alt text](images/Group.png)
+![example pictures](images/Group.png)
