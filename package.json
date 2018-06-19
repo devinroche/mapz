@@ -18,7 +18,7 @@
         "webpack": "^4.12.0"
     },
     "scripts": {
-        "start": "npm run webpack && open dist/index.html",
+        "start": "webpack -d && open ./dist/index.html",
         "webpack": "webpack -d"
     },
     "devDependencies": {

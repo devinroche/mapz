@@ -18,12 +18,49 @@ export function neighborCountHelper(neighbor_x,neighbor_y, mapArr){
     ) 
 };
 
-export function innerSimHelper(val, nbs) {
+export function innerSimHelper(val, nbs, nbs2) {
     let ret_val;
-    if(val){
-        ret_val = nbs < DEATH_LIMIT ? 0 : 1
-    }else {
-        ret_val = nbs > SNOW_BIRTH ? 2 : (nbs > BIRTH_LIMIT ? 1 : 0)
+    if(val === 1) {
+        // if(nbs === SNOW_BIRTH)
+        //     ret_val = 2; 
+
+        if( nbs > DEATH_LIMIT)
+            ret_val = 1;
+
+        else
+            ret_val = 0
+
+    } else {
+        if(nbs === SNOW_BIRTH){
+            ret_val = 1
+        }
+        else if( nbs >= BIRTH_LIMIT){
+            ret_val = 1
+        }
+        else {
+            ret_val = 0
+        }
     }
     return ret_val
+}
+
+export function countAround(r, c, scope_x, scope_y, mapArr){
+    var startX = c - scope_x;
+    var startY = r - scope_y;
+    var endX = c + scope_x;
+    var endY = r + scope_y;
+
+    var wallCounter = 0;
+
+    for (var iY = -2; iY <= 4; iY++) {
+        for (var iX = -2; iX <= 4; iX++){
+            if (!(iX == c && iY == r)){
+                if (mapArr[iY][iX]){
+                    wallCounter += 1;
+                }
+                else return
+            }
+        }
+    }
+    return wallCounter;
 }
