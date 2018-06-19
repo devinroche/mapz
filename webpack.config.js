@@ -1,7 +1,10 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
 module.exports = {
     entry: './src/main.js',
     output: {
-        filename: './js/bundle.js'
+        path: __dirname + '/dist',
+        filename: 'bundle.js'
     },
     module: {
         rules: [
@@ -10,5 +13,10 @@ module.exports = {
                 exclude: /node_modules/
             }
         ]
-    }
+    },
+    plugins: [
+        new CopyWebpackPlugin([ 
+            { from: './src/index.html', to: __dirname+'/dist' },
+         ])
+    ]
 };
