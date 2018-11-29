@@ -1,4 +1,4 @@
-import {WIDTH, HEIGHT, CHANCE_GRASS, CHANCE_MTN, NUMBER_STEPS, BIRTH_LIMIT, SNOW_BIRTH, DEATH_LIMIT} from './types';
+import {WIDTH, HEIGHT, CHANCE_GRASS, CHANCE_MTN, NUMBER_STEPS} from './types';
 import  {fillEmpty2dArr, neighborCountHelper, innerSimHelper, countAround} from './helpers'
 import {initTable, clearTables} from './html_help'
 // initialize starter map before clearing neighbors
@@ -6,7 +6,10 @@ function initMap(mapArr) {
     for (var x = 0; x < WIDTH; x++) {
         for (var y = 0; y < HEIGHT; y++) {
             var randomNum = Math.floor(Math.random() * 101);
-            if (randomNum < CHANCE_GRASS || (x === 0 || y === 0))
+            if(randomNum < CHANCE_MTN){
+              mapArr[x][y] = 2
+            }
+            else if (randomNum < CHANCE_GRASS || (x === 0 || y === 0))
                 mapArr[x][y] = 1;
         }
     }
