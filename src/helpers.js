@@ -25,7 +25,6 @@ export function neighborCountHelper(neighbor_x, neighbor_y, mapArr) {
 };
 
 export function innerSimHelper(val, nbs, nbs2) {
-	let ret_val;
 	if (val === 2) {
     if (nbs >= MTN_DEATH_LIMIT)
       return 2
